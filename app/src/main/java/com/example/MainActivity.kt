@@ -139,7 +139,7 @@ fun MatchPredictorDashboard(viewModel: PredictionViewModel) {
                             horizontalArrangement = Arrangement.spacedBy(8.dp)
                         ) {
                             Icon(
-                                imageVector = Icons.Default.Star,
+                                imageVector = Icons.Default.SportsSoccer,
                                 contentDescription = "Síp",
                                 tint = PitchGreenAccent,
                                 modifier = Modifier.size(32.dp)
@@ -207,7 +207,7 @@ fun MatchPredictorDashboard(viewModel: PredictionViewModel) {
                                 .testTag("away_team_input"),
                             singleLine = true,
                             leadingIcon = {
-                                Icon(Icons.Default.Person, contentDescription = null, tint = PitchGreenAccent)
+                                Icon(Icons.Default.DirectionsRun, contentDescription = null, tint = PitchGreenAccent)
                             },
                             colors = OutlinedTextFieldDefaults.colors(
                                 focusedBorderColor = PitchGreenAccent,
@@ -302,7 +302,7 @@ fun MatchPredictorDashboard(viewModel: PredictionViewModel) {
                                 horizontalArrangement = Arrangement.spacedBy(8.dp)
                             ) {
                                 Icon(
-                                    imageVector = Icons.Default.Star,
+                                    imageVector = Icons.Default.AutoAwesome,
                                     contentDescription = null,
                                     modifier = Modifier.size(20.dp)
                                 )
@@ -333,7 +333,7 @@ fun MatchPredictorDashboard(viewModel: PredictionViewModel) {
                             onClick = { viewModel.clearHistory() },
                             colors = ButtonDefaults.textButtonColors(contentColor = LaserCrimson)
                         ) {
-                            Icon(Icons.Default.Delete, contentDescription = null, modifier = Modifier.size(16.dp))
+                            Icon(Icons.Default.DeleteSweep, contentDescription = null, modifier = Modifier.size(16.dp))
                             Spacer(modifier = Modifier.width(4.dp))
                             Text("Összes törlése", fontSize = 12.sp)
                         }
@@ -354,7 +354,7 @@ fun MatchPredictorDashboard(viewModel: PredictionViewModel) {
                             verticalArrangement = Arrangement.spacedBy(8.dp)
                         ) {
                             Icon(
-                                imageVector = Icons.Default.List,
+                                imageVector = Icons.Default.History,
                                 contentDescription = null,
                                 tint = SlateGrayText.copy(alpha = 0.5f),
                                 modifier = Modifier.size(48.dp)
@@ -657,7 +657,7 @@ fun PredictionDetailDialog(
                         horizontalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
                         Icon(
-                            imageVector = Icons.Default.Star,
+                            imageVector = Icons.Default.AutoAwesome,
                             contentDescription = null,
                             tint = PitchGreenAccent
                         )
@@ -777,7 +777,7 @@ fun PredictionDetailDialog(
                                     horizontalArrangement = Arrangement.spacedBy(4.dp)
                                 ) {
                                     Icon(
-                                        Icons.Default.CheckCircle,
+                                        Icons.Default.Verified,
                                         contentDescription = null,
                                         tint = StadiumGoldAccent,
                                         modifier = Modifier.size(14.dp)
@@ -957,7 +957,7 @@ fun PredictionDetailDialog(
                                     .padding(8.dp),
                                 horizontalArrangement = Arrangement.spacedBy(8.dp)
                             ) {
-                                Icon(Icons.Default.Settings, contentDescription = null, tint = StadiumGoldAccent, modifier = Modifier.size(16.dp))
+                                Icon(Icons.Default.Tune, contentDescription = null, tint = StadiumGoldAccent, modifier = Modifier.size(16.dp))
                                 Text(
                                     text = "Beállított finomhangolások: \"${prediction.additionalInfo}\"",
                                     fontSize = 11.sp,
@@ -1003,10 +1003,10 @@ fun PredictionDetailDialog(
                                     ) {
                                         // Custom Icon based on trigger words in events
                                         val icon = when {
-                                            event.contains("gól", ignoreCase = true) || event.contains("gol", ignoreCase = true) -> Icons.Default.Star
-                                            event.contains("sárga", ignoreCase = true) || event.contains("sarga", ignoreCase = true) -> Icons.Default.Warning
-                                            event.contains("piros", ignoreCase = true) -> Icons.Default.Warning
-                                            else -> Icons.Default.Info
+                                            event.contains("gól", ignoreCase = true) || event.contains("gol", ignoreCase = true) -> Icons.Default.SportsSoccer
+                                            event.contains("sárga", ignoreCase = true) || event.contains("sarga", ignoreCase = true) -> Icons.Default.Style
+                                            event.contains("piros", ignoreCase = true) -> Icons.Default.Flag
+                                            else -> Icons.Default.HourglassEmpty
                                         }
                                         val tint = when {
                                             event.contains("gól", ignoreCase = true) || event.contains("gol", ignoreCase = true) -> PitchGreenAccent
@@ -1047,7 +1047,7 @@ fun PredictionDetailDialog(
                             horizontalArrangement = Arrangement.spacedBy(6.dp)
                         ) {
                             Icon(
-                                imageVector = Icons.Default.Settings,
+                                imageVector = Icons.Default.Analytics,
                                 contentDescription = null,
                                 tint = PitchGreenAccent,
                                 modifier = Modifier.size(16.dp)

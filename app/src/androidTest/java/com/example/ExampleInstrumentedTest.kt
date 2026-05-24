@@ -17,6 +17,6 @@ class ExampleInstrumentedTest {
   fun useAppContext() {
     // Context of the app under test.
     val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-    assertTrue(appContext.packageName.startsWith("com.aistudio.matchpredictor"))
+    assertEquals("com.example", appContext.packageName)
   }
 }
