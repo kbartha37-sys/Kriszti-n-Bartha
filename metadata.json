@@ -1,0 +1,6 @@
+{
+  "name": "Match Predictor",
+  "description": "Predicts match outcomes including cards, goals, and exact scores using Gemini AI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
